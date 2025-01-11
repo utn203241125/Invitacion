@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="container mt-5 p-4 text-center">
+        <!-- Encabezado -->
+        <header class="jumbotron bg-light text-dark">
+            <div class="col-md-12 mb-3 text-center">
+                <img src="assets/foto3.jpg" class="img-fluid rounded shadow" alt="Foto 3">
+            </div>
+            <h1 class="display-2">Aaron & Senine</h1>
+            <h2 class="lang">Nos casamos y queremos que nos acompañes en este día tan especial.</h2>
+        </header>
+
+        <!-- Sección de Cuenta Regresiva -->
+        <section id="countdown-section" class="my-5">
+            <br><br>
+            <h1 class="text-secondary mb-4">Cuenta Regresiva</h1>
+            <div id="countdown" class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days">192</span>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">5</span>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">47</span>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">8</span>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            // Fecha límite para la cuenta regresiva
+            var countdownDate = new Date("May 23, 2025 00:00:00").getTime();
+        
+            // Actualizar la cuenta regresiva cada segundo
+            var countdownFunction = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countdownDate - now;
+        
+                // Calcular días, horas, minutos y segundos
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+                // Actualizar el contenido de los elementos
+                document.getElementById("days").innerText = days;
+                document.getElementById("hours").innerText = hours;
+                document.getElementById("minutes").innerText = minutes;
+                document.getElementById("seconds").innerText = seconds;
+        
+                // Si la cuenta regresiva termina, detener el intervalo
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    document.getElementById("countdown").innerHTML = "¡Ya me Case <3 !";
+                }
+            }, 1000);
+        </script>
+        
+        <!-- Sección de Música -->
+        <section id="music" class="my-5">
+            <h1 class="text-secondary mb-4">Música</h1>
+            <audio controls loop class="audio-player mb-3">
+                <source src="assets/Ballerina.mp3" type="audio/mpeg">
+                Tu navegador no soporta el reproductor de audio.
+            </audio>
+            
+            <style>
+                .audio-player {
+                    width: 100%;
+                    height: 60px; /* Ajusta la altura según tu preferencia */
+                }
+            </style>
+            
+        </section>
+
+        <!-- Sección de Galería -->
+        <section id="gallery" class="my-5">
+            <h2 class="text-secondary mb-4">Galería</h2>
+            <div class="row">
+                <!-- Primera fila (una imagen en una sola columna) -->
+                <div class="col-md-12 d-flex justify-content-center mb-3">
+                    <img src="assets/foto4.jpg" class="img-fluid rounded shadow" alt="Foto 1">
+                </div>
+        
+                <!-- Segunda fila (dos fotos una al lado de la otra) -->
+                <div class="col-md-6 mb-3">
+                    <img src="assets/foto7.jpg" class="img-fluid rounded shadow" alt="Foto 2">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="assets/foto5.jpg" class="img-fluid rounded shadow" alt="Foto 3">
+                </div>
+        
+                <!-- Tercera fila (una imagen más pequeña) -->
+                <div class="col-md-12 d-flex justify-content-center mb-3">
+                    <img src="assets/foto6.jpg" class="img-fluid rounded shadow small-img" alt="Foto 4">
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            .small-img {
+                max-width: 40%; /* Ajusta el tamaño máximo al 50% del contenedor */
+                height: auto; /* Mantiene la proporción de la imagen */
+            }
+        </style>
+        
+        
+
+        <!-- Sección de Ubicación -->
+        <section id="location" class="my-5">
+            <h1 class="text-secondary mb-4">Ubicación</h1>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.88422200889!2d-99.03957975507966!3d19.39008698645145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fd1e191ec209%3A0x555079ef46b9ed2!2sLa%20Iglesia%20de%20Jesucristo%20de%20los%20Santos%20de%20los%20%C3%9Altimos%20D%C3%ADas!5e0!3m2!1ses-419!2smx!4v1731472630141!5m2!1ses-419!2smx"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br>
+            <h4>Gral. Francisco Leyva 76, La Valenciana, Iztapalapa, 09100 Ciudad de México, Méx.
+                <br> La entrada es por JUAN MANUEL TORREA
+            </h4>
+        </section>
+
+        <!-- Sección de Mesa de Regalos -->
+        <section id="gifts" class="my-5">
+            <h1 class="text-secondary mb-4">Mesa de Regalos</h1>
+            <h2>Haz clic <a
+                    href="https://login.liverpool.com.mx/u/login?state=hKFo2SB4T08xZkR4N1VHNW9yZW50dkphcnRqZ0FOMkc1Z2hEYqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRzR0ZsVUpoX2ZIWTJiY291T2hnTTZMQkh1QmZFME1oo2NpZNkgVXBQSElJaGNGckRuWVRuUW5pWHFBNjFQN1I4ZERtZGY"
+                    target="_blank">aquí</a> para ver nuestra mesa de regalos.</h2>
+        </section>
+        <!-- Sección de Confirmación de Asistencia -->
+        <section>
+            <h1 class="text-secondary mb-4">Asistencia</h1>
+            <iframe width="640px" height="480px" src="https://forms.office.com/r/t2jb1MFAAZ?embed=true" frameborder="0"
+                marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen
+                webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+            <br><br>
+            <a href="http:https://forms.office.com/r/t2jb1MFAAZ"><h2>Confirma tu asistencia</h2></a>
+        </section>
+        <br><br><br>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
