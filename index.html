@@ -8,6 +8,29 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
+    <style>
+        .small-img {
+            max-width: 40%;
+            height: auto;
+        }
+        .audio-player {
+            width: 100%;
+            height: 60px;
+        }
+        @media (max-width: 768px) {
+            .display-2 {
+                font-size: 2rem;
+            }
+            .img-fluid {
+                max-width: 100%;
+                height: auto;
+            }
+            .small-img {
+                max-width: 100%;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -15,11 +38,11 @@
     <div class="container mt-5 p-4 text-center">
         <!-- Encabezado -->
         <header class="jumbotron bg-light text-dark">
-            <div class="col-md-12 mb-3 text-center">
+            <div class="col-12 col-md-8 col-lg-6 mb-3 text-center mx-auto">
                 <img src="assets/foto3.jpg" class="img-fluid rounded shadow" alt="Foto 3">
             </div>
-            <h1 class="display-2">Aaron & Senine</h1>
-            <h2 class="lang">Nos casamos y queremos que nos acompañes en este día tan especial.</h2>
+            <h1 class="display-2 text-center">Aaron & Senine</h1>
+            <h2 class="lang text-center">Nos casamos y queremos que nos acompañes en este día tan especial.</h2>
         </header>
 
         <!-- Sección de Cuenta Regresiva -->
