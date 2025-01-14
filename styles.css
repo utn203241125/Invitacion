@@ -3,13 +3,42 @@ body {
     background-color: #f9f9f9;
     color: #333;
     background-image: url('assets/fondo1.jpg');
-    background-size: 150%; /* Aumenta el tamaño del fondo para que parezca más lejos */
-    background-position: center center;
+    background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
+    background-position: center;
     background-repeat: no-repeat;
+}
+
+/* Ajustes específicos para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Cambia el tamaño para que se ajuste dentro del contenedor */
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        background-size: 200%; /* Aumenta el tamaño para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 250%; /* Ajusta aún más para dispositivos móviles */
+    }
 }
 
 h1, h2 {
     color: #6b4f4f;
+}
+
+@media (max-width: 768px) {
+    h1.display-2 {
+        font-size: 2.5rem; /* Ajuste para dispositivos más pequeños */
+    }
+
+    h2.lang {
+        font-size: 1.2rem; /* Ajuste para dispositivos más pequeños */
+    }
 }
 
 .countdown-container {
