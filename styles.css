@@ -1,12 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: 800;
     background-color: #f9f9f9;
     color: #333;
+    
     background-image: url('assets/fondo1.jpg');
     background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
     background-position: center;
     background-repeat: no-repeat;
 }
+
 
 /* Ajustes específicos para diferentes tamaños de pantalla */
 @media (max-width: 768px) {
@@ -29,6 +33,7 @@ body {
 
 h1, h2 {
     color: #6b4f4f;
+    
 }
 
 @media (max-width: 768px) {
